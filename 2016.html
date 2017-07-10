@@ -1,0 +1,18 @@
+---
+layout: default
+title: 2016 Ed-Tech Spinoffs
+---
+
+<!-- Spinoffs -->
+{% assign spinoffs = site.data.2016 %}
+{% assign spinoffs = spinoffs | sort:"Name" %}
+
+<!-- Document -->
+
+{% for spinoff in spinoffs %}
+
+<ul>
+<li><strong>{{ spinoff.Name }}</strong> (Parent company: {{ spinoff.Parent }}, <a href="{{ spinoff.URL }}">News Link</a>)</li>
+</ul>
+
+{% endfor %}
